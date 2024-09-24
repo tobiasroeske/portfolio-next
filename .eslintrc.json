@@ -1,3 +1,30 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals", 
+    "next/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    // Prettier-Formatierungsregeln
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,               // Kein Semikolon am Ende von Zeilen
+        "singleQuote": true,         // Einfache Anführungszeichen anstelle von doppelten
+        "trailingComma": "none",     // Kein Komma am Ende von Arrays/Objekten
+        "printWidth": 80,            // Max. 80 Zeichen pro Zeile
+        "tabWidth": 2,               // Verwende 2 Leerzeichen für Einrückungen
+        "bracketSpacing": true,      // Leerzeichen zwischen geschweiften Klammern
+        "arrowParens": "avoid"       // Pfeilfunktionen ohne Klammern, wenn es nur ein Argument gibt
+      }
+    ],
+    // Zusätzliche ESLint-Regeln
+    "no-console": "warn",               // Warnung, wenn console.log verwendet wird
+    "newline-before-return": "error",   // Neue Zeile vor jedem "return"
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "function", "next": "function" } // Leerzeile zwischen Funktionen
+    ],
+    "no-unused-vars": "warn"           // Warnung bei ungenutzten Variablen
+  }
 }
