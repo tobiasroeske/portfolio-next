@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '../../styles/globals.css'
 import { Karla, Fira_Code } from 'next/font/google'
 import { ny } from '@/lib/utils'
 import Header from '@/components/site-header'
