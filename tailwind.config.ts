@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         primary: {
           DEFAULT: 'rgba(61, 207, 182, 1)',
-          light: 'rgba(61, 207, 182, 0.1)'
+          light: 'rgba(61, 207, 182, 0.1)',
+          dark: 'rgba(61, 207, 182, 0.5)'
         },
         background: 'var(--background)',
         foreground: 'var(--foreground)'

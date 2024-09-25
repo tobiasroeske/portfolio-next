@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Karla, Fira_Code } from 'next/font/google'
 import { ny } from '@/lib/utils'
+import Header from '@/components/site-header'
 
 const fontKarla = Karla({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
           fontFira.variable
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
