@@ -15,10 +15,14 @@
   }
 }
 
+html {
+  @apply flex items-center justify-center scroll-smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  @apply font-karla;
+  @apply font-karla w-full max-w-[1440px];
 }
 
 @layer utilities {

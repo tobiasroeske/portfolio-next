@@ -20,6 +20,20 @@ const config: Config = {
       fontFamily: {
         karla: ['var(--font-karla)'],
         fira: ['var(--font-fira)']
+      },
+      keyframes: {
+        'slide-out': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-200%)' }
+        },
+        'slide-in': {
+          '0%': { transform: 'translateX(200%)' },
+          '100%': { transform: 'translateX(0)' }
+        }
+      },
+      animation: {
+        'slide-in-out':
+          'slide-out  1.5s ease-in forwards, slide-in  1.0s ease-in-out 1.5s forwards'
       }
     }
   },

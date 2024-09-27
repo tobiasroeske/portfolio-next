@@ -1,13 +1,15 @@
 import { i18nConfig } from '@/i18nConfig'
 import { ny } from '@/lib/utils'
 import { usePathname, useRouter } from 'next/navigation'
-import { useState, MouseEvent, use } from 'react'
+import { useState, MouseEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 
 function ToggleButton() {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('de')
   const { i18n } = useTranslation()
+  const languages = i18nConfig.locales
   const currentLocale = i18n.language
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<string>(currentLocale)
   const router = useRouter()
   const currentPathname = usePathname()
 
@@ -24,46 +26,31 @@ function ToggleButton() {
       router.push(currentPathname.replace(`/${currentLocale}`, `/${newLocale}`))
     }
     router.refresh()
-    toggleButton(e)
+    toggleButton(e, newLocale)
   }
 
-  function toggleButton(e: MouseEvent<HTMLDivElement>) {
+  function toggleButton(e: MouseEvent<HTMLDivElement>, newLocale: string) {
     e.stopPropagation()
-    selectedLanguage === 'de'
-      ? setSelectedLanguage('en')
-      : setSelectedLanguage('de')
+    setSelectedLanguage(newLocale)
   }
-
-  useState(() => {
-    if (currentLocale === i18nConfig.defaultLocale) {
-      setSelectedLanguage('de')
-    } else {
-      setSelectedLanguage('en')
-    }
-  })
 
   return (
     <div
       className={ny(
-        `flex items-center border-primary border rounded-[100px] h-7`
+        `flex h-7 items-center rounded-[100px] border border-primary transition hover:border-white`
       )}
     >
-      <div
-        className={ny(
-          `text-center px-3 transition rounded-[100px] font-fira text-white cursor-pointer ${selectedLanguage === 'de' ? 'bg-primary' : 'bg-primary-50'}`
-        )}
-        onClick={e => handleLanguageChange(e)}
-      >
-        DE
-      </div>
-      <div
-        className={ny(
-          `text-center px-3 rounded-[100px] transition font-fira text-white cursor-pointer ${selectedLanguage === 'en' ? 'bg-primary' : 'bg-primary-50'}`
-        )}
-        onClick={e => handleLanguageChange(e)}
-      >
-        EN
-      </div>
+      {languages.map((language, index) => (
+        <div
+          key={index}
+          className={ny(
+            `flex h-full cursor-pointer items-center rounded-[100px] px-3 text-center font-fira text-white transition ${selectedLanguage === language ? 'bg-primary' : 'bg-primary-50'}`
+          )}
+          onClick={e => handleLanguageChange(e)}
+        >
+          {language.toUpperCase()}
+        </div>
+      ))}
     </div>
   )
 }

@@ -3,6 +3,9 @@ import '../../styles/globals.css'
 import { Karla, Fira_Code } from 'next/font/google'
 import { ny } from '@/lib/utils'
 import Header from '@/components/site-header'
+import TranslationsProvider from '@/components/translation-provider'
+import initTranslations from '@/i18n/server'
+import { i18nNamespaces } from '@/i18n/i18nNamespaces'
 
 const fontKarla = Karla({
   subsets: ['latin'],
@@ -19,23 +22,33 @@ export const metadata: Metadata = {
   description: 'Tobias Roeske - Frontend Developer'
 }
 
-export default function RootLayout({
-  children
+export default async function RootLayout({
+  children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode
+  params: { locale: string }
 }>) {
+  const { resources } = await initTranslations(locale, i18nNamespaces)
+
   return (
-    <html lang="en">
-      <body
-        className={ny(
-          'bg.background, min-h-screen antialiased',
-          fontKarla.variable,
-          fontFira.variable
-        )}
-      >
-        <Header />
-        {children}
-      </body>
-    </html>
+    <TranslationsProvider
+      locale={locale}
+      resources={resources}
+      namespaces={i18nNamespaces}
+    >
+      <html lang="en">
+        <body
+          className={ny(
+            'bg.background, min-h-screen antialiased',
+            fontKarla.variable,
+            fontFira.variable
+          )}
+        >
+          <Header />
+          {children}
+        </body>
+      </html>
+    </TranslationsProvider>
   )
 }

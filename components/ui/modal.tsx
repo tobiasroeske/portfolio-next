@@ -24,6 +24,7 @@ function Overlay({ onClick, children }: OverlayProps) {
 
 function Modal({ setOpen }: ModalProps) {
   const { t } = useTranslation()
+
   return (
     <>
       <Overlay onClick={setOpen}>

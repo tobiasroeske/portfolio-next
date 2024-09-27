@@ -1,7 +1,7 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "next/typescript",
+    // "next/typescript",
     "plugin:prettier/recommended"
   ],
   "plugins": ["tailwindcss"],
@@ -17,7 +17,8 @@
         "printWidth": 80, // Max. 80 Zeichen pro Zeile
         "tabWidth": 2, // Verwende 2 Leerzeichen für Einrückungen
         "bracketSpacing": true, // Leerzeichen zwischen geschweiften Klammern
-        "arrowParens": "avoid" // Pfeilfunktionen ohne Klammern, wenn es nur ein Argument gibt
+        "arrowParens": "avoid", // Pfeilfunktionen ohne Klammern, wenn es nur ein Argument gibt
+        "endOfLine": "auto"
       }
     ],
     // Zusätzliche ESLint-Regeln

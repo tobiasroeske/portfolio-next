@@ -5,15 +5,21 @@ import { Icons } from './icons/icons'
 import Modal from './ui/modal'
 import { useState } from 'react'
 import Image from 'next/image'
+import { ny } from '@/lib/utils'
 
-function NavMobile() {
+function NavMobile({ className }: { className?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   function toggleMenu() {
     setIsMenuOpen(prev => !prev)
   }
+
   return (
-    <nav className="relative flex w-full items-center justify-between px-4 py-8">
+    <nav
+      className={ny(
+        `relative w-full items-center justify-between px-4 py-8 ${className}`
+      )}
+    >
       <Link href="/" className="cursor-pointer">
         <Image
           src={`/static/${siteConfig.logoPath}`}
