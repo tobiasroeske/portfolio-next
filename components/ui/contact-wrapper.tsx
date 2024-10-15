@@ -28,7 +28,7 @@ function ContactWrapper() {
     <div className="mt-6 flex h-[336px] w-full items-start justify-between px-4">
       <div className="flex h-full flex-col items-center gap-6">
         <Link
-          href="/"
+          href="#about-me"
           className="group relative flex h-12 w-[30px] cursor-pointer items-center justify-center rounded-3xl border-2 border-primary transition duration-500"
         >
           <span className="group-hover:translate-y-2 group-hover:text-primary">
