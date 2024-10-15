@@ -6,6 +6,7 @@ import Header from '@/components/site-header'
 import TranslationsProvider from '@/components/translation-provider'
 import initTranslations from '@/i18n/server'
 import { i18nNamespaces } from '@/i18n/i18nNamespaces'
+import MouseShadowEffect from '@/components/ui/mouse-shadow-effect'
 
 const fontKarla = Karla({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default async function RootLayout({
             fontFira.variable
           )}
         >
+          <MouseShadowEffect />
           <Header />
           {children}
         </body>

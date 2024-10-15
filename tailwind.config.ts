@@ -1,3 +1,4 @@
+import { transform } from 'next/dist/build/swc'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -29,11 +30,17 @@ const config: Config = {
         'slide-in': {
           '0%': { transform: 'translateX(200%)' },
           '100%': { transform: 'translateX(0)' }
+        },
+        scroll: {
+          to: {
+            transform: 'translateX(calc(-100% - 56px))'
+          }
         }
       },
       animation: {
         'slide-in-out':
-          'slide-out  1.5s ease-in forwards, slide-in  1.0s ease-in-out 1.5s forwards'
+          'slide-out  1.5s ease-in forwards, slide-in  1.0s ease-in-out 1.5s infinite',
+        scroll: 'scroll 20s linear infinite'
       }
     }
   },

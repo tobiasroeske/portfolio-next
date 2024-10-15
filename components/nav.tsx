@@ -27,7 +27,7 @@ function Nav({ className }: { className?: string }) {
               <Link href={link.path} className="group-hover:text-white">
                 {link.title}
               </Link>
-              <div className="h-1 w-1 rounded-full bg-primary opacity-0 transition group-hover:opacity-100"></div>
+              <div className="h-[6px] w-[6px] rounded-full bg-primary opacity-0 transition group-hover:opacity-100"></div>
             </li>
           ))}
         </ul>
@@ -39,7 +39,7 @@ function Nav({ className }: { className?: string }) {
           width={48}
           height={48}
         />
-        <p className="text-4xl font-bold text-primary">{siteConfig.author}</p>
+        {/* <p className="text-4xl font-bold text-primary">{siteConfig.author}</p> */}
       </div>
     </div>
   )
