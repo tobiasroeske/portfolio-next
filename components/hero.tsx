@@ -16,7 +16,7 @@ function Hero() {
           '--height-md': 'calc(100dvh - 136px)'
         } as React.CSSProperties
       }
-      className="relative flex h-[var(--height)] w-full flex-col items-center justify-end md:h-[var(--height-md)]"
+      className="relative flex h-[var(--height)] w-full flex-col items-center justify-end px-4 md:h-[var(--height-md)] lg:px-14 2xl:px-4"
     >
       <div className="flex flex-1 flex-col items-center justify-center gap-3">
         <h2 className="font-fira text-xl md:text-3xl lg:text-[40px]">

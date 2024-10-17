@@ -2,24 +2,24 @@
 import React from 'react'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
-import { Icons } from './icons/icons'
+import Container from './ui/container'
 
 function AboutMe() {
   const { t } = useTranslation()
   const bulletPoints = [
     {
       text: t('landing:point_one'),
-      imgPath: '/static/highlights.png',
+      imgPath: '/static/location_on.svg',
       alt: 'Highlights'
     },
     {
       text: t('landing:point_two'),
-      imgPath: '/static/cognition.png',
+      imgPath: '/static/cognition.svg',
       alt: 'Cognition'
     },
     {
       text: t('landing:point_three'),
-      imgPath: '/static/new_releases.png',
+      imgPath: '/static/new_releases.svg',
       alt: 'New Releases'
     }
   ]
@@ -27,7 +27,7 @@ function AboutMe() {
   return (
     <section
       id="about-me"
-      className="mt-[100px] flex flex-col items-start px-6 md:gap-24 lg:flex-row"
+      className="mt-[100px] flex flex-col items-start gap-10 px-4 md:gap-24 lg:flex-row lg:gap-10 lg:px-14 2xl:px-4"
     >
       <Image
         src="/static/photo_small_grey.jpg"
@@ -40,15 +40,8 @@ function AboutMe() {
         <h3 className="self-start font-karla text-lg text-primary lg:text-2xl">
           {t('landing:who_i_am')}
         </h3>
-        <div
-          style={
-            {
-              '--background': '#3DCFB61A'
-            } as React.CSSProperties
-          }
-          className="flex w-full flex-col items-start gap-8 rounded-[30px] border border-primary px-8 py-[27px] [background:var(--background)]"
-        >
-          <h2 className="text-[56px] font-bold leading-[44.8px] text-primary lg:text-[64px] lg:leading-[64px]">
+        <Container className="w-full items-start gap-8">
+          <h2 className="font-fira text-[56px] font-bold leading-[44.8px] text-primary lg:text-[64px] lg:leading-[64px]">
             {t('common:about_me')}
           </h2>
           <div className="flex flex-col">
@@ -77,7 +70,7 @@ function AboutMe() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
     </section>
   )
