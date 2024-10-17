@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Skill {
   name: string
@@ -69,10 +70,12 @@ const learningSkills: Skill[] = [
 ]
 
 export function ToolTip() {
+  const { t } = useTranslation()
+
   return (
     <div className="absolute bottom-28 left-1/2 hidden -translate-x-1/2 transform flex-col items-center justify-center gap-2 rounded-[30px] bg-white px-3 py-2 opacity-0 transition-all group-hover:flex group-hover:opacity-100">
-      <span className="whitespace-nowrap text-center font-karla text-primary">
-        I have special <br /> interest in learning
+      <span className="text-center font-karla font-semibold text-primary">
+        {t('landing:skills_to_learn')}
       </span>
       <div className="flex justify-center gap-2">
         {learningSkills.map((skill, index) => (
