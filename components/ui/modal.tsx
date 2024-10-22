@@ -14,7 +14,7 @@ type OverlayProps = {
 export function Overlay({ onClick, children }: OverlayProps) {
   return (
     <div
-      className="fixed inset-0 z-30 bg-black bg-opacity-50"
+      className="fixed inset-0 z-[200] bg-black bg-opacity-50"
       onClick={onClick}
     >
       {children}
