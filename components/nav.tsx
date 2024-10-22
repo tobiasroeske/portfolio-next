@@ -14,9 +14,7 @@ function Nav({ className }: { className?: string }) {
   ]
 
   return (
-    <div
-      className={`${className} items-center justify-between px-10 py-12 md:px-4 lg:px-14 2xl:px-4`}
-    >
+    <div className={`${className} items-center justify-between py-12`}>
       <nav className="font-fira">
         <ul className="flex gap-6">
           <li>

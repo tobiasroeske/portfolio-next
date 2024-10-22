@@ -9,7 +9,7 @@ function Skills() {
   const { t } = useTranslation()
 
   return (
-    <section className="mt-[100px] flex flex-col gap-10 px-4 lg:px-14 2xl:px-4">
+    <section className="mt-[100px] flex flex-col gap-10">
       <div className="flex flex-col items-start justify-start gap-[15px] md:gap-[20px]">
         <h4 className="font-karla text-lg font-bold leading-5 text-primary md:text-2xl md:leading-7">
           Technologies

@@ -48,7 +48,7 @@ export default async function RootLayout({
         >
           <MouseShadowEffect />
           <Header />
-          {children}
+          <main className="px-4 lg:px-14 2xl:px-4">{children}</main>
         </body>
       </html>
     </TranslationsProvider>
