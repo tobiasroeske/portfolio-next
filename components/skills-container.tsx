@@ -79,7 +79,7 @@ export function ToolTip() {
       </span>
       <div className="flex justify-center gap-2">
         {learningSkills.map((skill, index) => (
-          <div key={index}>
+          <div key={index} className="flex flex-col items-center">
             <Image
               src={`/static/${skill.icon}`}
               alt={skill.name}

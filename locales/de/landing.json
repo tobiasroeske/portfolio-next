@@ -1,1 +1,27 @@
-{"another_skill":"eine weitere Fähigkeit","featured_projects":"Ausgewählte Projekte","featured_projects_better":"Featured Projects","feel_free":"Nimm Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.","header":"Das ist {{userName}}'s Portfolio","main_text":"Hi, ich bin Frontend-Entwickler aus Luzern, Schweiz, und mit Leidenschaft für moderne, intuitive Webanwendungen am Werk.","point_one":"Ich bin flexibel beim Arbeitsort und arbeite gerne remote. Ob im Büro oder von zu Hause – ich setze alles daran, Projekte erfolgreich abzuschließen.","point_three":"Webentwicklung begeistert mich. Ich verwandle Ideen in praktische und ästhetische Anwendungen, die das Nutzererlebnis verbessern.","point_two":"Ich nehme gerne neue Herausforderungen an und erweitere mein Wissen über Technologien, um meine Fähigkeiten kontinuierlich zu verbessern.","project_overview":"Erkunden Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.","skills_overview":"Ich habe an verschiedenen Projekten gearbeitet und dabei insbesondere mit React und Next.js gearbeitet. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung stets an der Spitze zu bleiben.","skills_to_learn":"Fähigkeiten, die ich gerade lerne","who_i_am":"Wer ich bin","you_need":"Du brauchst"}
+{
+    "another_skill": "eine weitere Fähigkeit",
+    "featured_projects": "Ausgewählte Projekte",
+    "featured_projects_better": "Meine Projekte",
+    "feel_free": "Nimm Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "header": "Das ist {{userName}}'s Portfolio",
+    "main_text": "Hi, ich bin Frontend-Entwickler aus Luzern, Schweiz, und mit Leidenschaft für moderne, intuitive Webanwendungen am Werk.",
+    "point_one": "Ich bin flexibel beim Arbeitsort und arbeite gerne remote. Ob im Büro oder von zu Hause – ich setze alles daran, Projekte erfolgreich abzuschließen.",
+    "point_three": "Webentwicklung begeistert mich. Ich verwandle Ideen in praktische und ästhetische Anwendungen, die das Nutzererlebnis verbessern.",
+    "point_two": "Ich nehme gerne neue Herausforderungen an und erweitere mein Wissen über Technologien, um meine Fähigkeiten kontinuierlich zu verbessern.",
+    "project_overview": "Entdecke eine Auswahl meiner Arbeiten und erlebe meine Fähigkeiten in Aktion, indem du mit den Projekten interagierst.",
+    "skills_overview": "Ich habe an verschiedenen Projekten gearbeitet und dabei insbesondere mit React und Next.js gearbeitet. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung stets an der Spitze zu bleiben.",
+    "skills_to_learn": "Fähigkeiten, die ich gerade lerne",
+    "who_i_am": "Wer ich bin",
+    "you_need": "Du brauchst",
+    "projects": {
+        "join": {
+            "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop und weise Nutzer sowie Kategorien zu."
+        },
+        "da_bubble": {
+            "description": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und -zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und einer robusten Kanalorganisation."
+        },
+        "sharkie": {
+            "description": "Erlebe mit Sharkie, dem Hai, ein actiongeladenes Jump-and-Run-Spiel! Besiege Quallen, Kugelfische und einen Killerwal in diesem auf OOP basierten Abenteuer."
+        }
+    }
+}

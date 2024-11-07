@@ -31,7 +31,7 @@ function ProjectContainer({ project, index, onClick }: ProjectContainerProps) {
             key={index}
             className="text-base leading-5 text-white md:text-lg"
           >
-            {tech}{' '}
+            {tech.name}{' '}
             {index < project.technologies.length - 1 && (
               <span className="text-lg text-primary">| </span>
             )}

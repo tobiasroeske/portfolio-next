@@ -1,1 +1,7 @@
-{"about_me":"Über mich","lets_talk":"Lass und reden","my_projects":"Meine Projekte","projects":"Projekte","say_hello":"Sag Hallo!"}
+{
+    "about_me": "Über mich",
+    "lets_talk": "Schreib mir!",
+    "my_projects": "Meine Projekte",
+    "projects": "Projekte",
+    "say_hello": "Sag Hallo!"
+}
