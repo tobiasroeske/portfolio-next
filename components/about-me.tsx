@@ -27,7 +27,7 @@ function AboutMe() {
   return (
     <section
       id="about-me"
-      className="mt-[100px] flex flex-col items-start gap-10 px-4 md:gap-24 lg:flex-row lg:gap-10 lg:px-14 2xl:px-4"
+      className="mt-[100px] flex flex-col items-start gap-10 md:gap-24 lg:flex-row lg:gap-10"
     >
       <Image
         src="/static/photo_small_grey.jpg"

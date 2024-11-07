@@ -17,7 +17,7 @@ function NavMobile({ className }: { className?: string }) {
   return (
     <nav
       className={ny(
-        `relative w-full items-center justify-between px-4 py-8 ${className}`
+        `relative w-full items-center justify-between py-8 ${className}`
       )}
     >
       <Link href="/" className="cursor-pointer">

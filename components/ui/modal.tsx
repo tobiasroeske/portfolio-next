@@ -11,10 +11,10 @@ type OverlayProps = {
   onClick: () => void
 }
 
-function Overlay({ onClick, children }: OverlayProps) {
+export function Overlay({ onClick, children }: OverlayProps) {
   return (
     <div
-      className="fixed inset-0 z-30 bg-black bg-opacity-50"
+      className="fixed inset-0 z-[200] bg-black bg-opacity-50"
       onClick={onClick}
     >
       {children}
@@ -28,7 +28,7 @@ function Modal({ setOpen }: ModalProps) {
   return (
     <>
       <Overlay onClick={setOpen}>
-        <div className="bg-modal absolute right-4 top-16 flex w-fit  items-center justify-center rounded-[30px] border border-[#3DCFB6] bg-opacity-0 px-20 py-10 drop-shadow">
+        <div className="bg-modal absolute right-4 top-16 flex w-fit items-center justify-center rounded-[30px] border border-[#3DCFB6] bg-opacity-0 px-20 py-10 drop-shadow">
           <ul className="flex flex-col items-start justify-center gap-6 font-fira text-lg text-white">
             <li>
               <Link href={'/'}>{t('common:about_me')}</Link>
