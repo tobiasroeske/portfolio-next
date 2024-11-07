@@ -18,11 +18,12 @@ function BannerAnimation({ className }: { className?: string }) {
     <div
       style={
         {
-          '--background': '#314743'
+          '--background': '#314743',
+          '--width': 'calc(100vw - 5px'
         } as React.CSSProperties
       }
       className={ny(
-        `z-20 flex w-screen rotate-[-3deg] gap-10 overflow-hidden px-8 py-3 [background:var(--background)] md:gap-14 ${className}`
+        `z-20 flex w-[var(--width)] rotate-[-3deg] gap-10 overflow-hidden py-3 [background:var(--background)] md:gap-14 ${className}`
       )}
     >
       <div className="flex min-w-full shrink-0 animate-scroll items-center justify-start gap-10 md:gap-14">

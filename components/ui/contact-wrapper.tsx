@@ -25,7 +25,7 @@ function ContactWrapper() {
   ]
 
   return (
-    <div className="mt-6 flex h-[336px] w-full items-start justify-between px-4 lg:px-0">
+    <div className="mt-6 flex h-[336px] w-full items-start justify-between">
       <div className="flex h-full flex-col items-center gap-6">
         <Link
           href="#about-me"
