@@ -1,4 +1,5 @@
 import { Project, Technologies } from '@/app/types/typeConfig'
+import { techIcons } from '@/components/icons/tech-icons'
 
 export const siteConfig = {
   author: 'Tobias Roeske',
@@ -12,9 +13,9 @@ export const siteConfig = {
     {
       title: 'Join',
       technologies: [
-        { name: 'React', icon: 'react.svg' },
-        { name: 'TypeScript', icon: 'typescript.svg' },
-        { name: 'Firebase', icon: 'firebase.svg' }
+        { name: 'React', icon: techIcons.react },
+        { name: 'TypeScript', icon: techIcons.typeScript },
+        { name: 'Firebase', icon: techIcons.firebase }
       ] as Technologies[],
       gitHubLink: 'https://github.com/tobiasroeske/react-join',
       projectLink: '',

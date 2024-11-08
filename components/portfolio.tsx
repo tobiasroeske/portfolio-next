@@ -9,14 +9,16 @@ import { Project } from '@/app/types/typeConfig'
 function Portfolio() {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedProject, setSelectedProjcet] = useState<Project | null>(null)
+  const [index, setIndex] = useState<number>(0)
   const { t } = useTranslation()
 
   function closeModal() {
     setSelectedProjcet(null)
   }
 
-  function selectProject(project: Project) {
+  function selectProject(project: Project, index: number) {
     setSelectedProjcet(project)
+    setIndex(index)
   }
 
   return (
@@ -40,12 +42,16 @@ function Portfolio() {
             key={index}
             project={project}
             index={index}
-            onClick={() => selectProject(project)}
+            onClick={() => selectProject(project, index)}
           />
         ))}
       </div>
       {selectedProject && (
-        <ProjectModal setOpen={closeModal} project={selectedProject} />
+        <ProjectModal
+          closeModal={closeModal}
+          project={selectedProject}
+          index={index}
+        />
       )}
     </section>
   )

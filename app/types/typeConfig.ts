@@ -1,3 +1,5 @@
+import { IconProps } from '@/components/icons/icons'
+
 export interface Project {
   title: string
   technologies: Technologies[]
@@ -7,7 +9,10 @@ export interface Project {
   projectLink: string
 }
 
-export interface Technologies {
+export type Technologies = {
   name: string
-  icon: string
+
+  icon:
+    | string
+    | (({ width, height, fill, className }: IconProps) => JSX.Element)
 }

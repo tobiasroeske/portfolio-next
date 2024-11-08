@@ -4,6 +4,7 @@ import Image from 'next/image'
 import ToggleButton from './ui/toggle-button'
 import { useTranslation } from 'react-i18next'
 import { siteConfig } from '@/config/siteConfig'
+import CustomLink from './ui/cutstom-link'
 
 function Nav({ className }: { className?: string }) {
   const { t } = useTranslation()
@@ -21,11 +22,8 @@ function Nav({ className }: { className?: string }) {
             <ToggleButton />
           </li>
           {navLinks.map(link => (
-            <li key={link.title} className="group flex flex-col items-center">
-              <Link href={link.path} className="group-hover:text-white">
-                {link.title}
-              </Link>
-              <div className="h-[6px] w-[6px] rounded-full bg-primary opacity-0 transition group-hover:opacity-100"></div>
+            <li key={link.title} className="group">
+              <CustomLink href={link.path}>{link.title}</CustomLink>
             </li>
           ))}
         </ul>

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Icons } from '../icons/icons'
 import { siteConfig } from '@/config/siteConfig'
+import CustomLink from './cutstom-link'
 
 interface LinkItem {
   href: string
@@ -41,14 +42,14 @@ function ContactWrapper() {
       <div className="flex h-full flex-col items-center justify-center gap-6 pt-10">
         <div className="flex flex-col items-center justify-center gap-3">
           {links.map(({ href, Icon }, index) => (
-            <Link
+            <CustomLink
               key={index}
               href={href}
-              className="group relative flex items-center transition-all"
+              variant="row"
+              className="relative flex items-center transition-all"
             >
               <Icon className="transition-all group-hover:fill-white" />
-              <div className="absolute right-[-12px] h-1 w-1 rounded-full bg-primary opacity-0 transition-all group-hover:opacity-100 md:h-[6px] md:w-[6px]"></div>
-            </Link>
+            </CustomLink>
           ))}
         </div>
         <div className="h-full w-[1px] bg-primary"></div>

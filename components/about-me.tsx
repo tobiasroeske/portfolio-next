@@ -36,7 +36,10 @@ function AboutMe() {
         height={568}
         className="h-full w-full rounded-[30px] object-cover lg:size-[568px]"
       />
-      <div className="flex w-full flex-col items-center gap-4 lg:mt-24">
+      <div
+        id="about-me-container"
+        className="flex w-full flex-col items-center gap-4 lg:mt-24"
+      >
         <h3 className="self-start font-karla text-lg text-primary lg:text-2xl">
           {t('landing:who_i_am')}
         </h3>
